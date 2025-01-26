@@ -11,7 +11,7 @@ description         : >-
 baseurl             : ""   # Change to empty quotes if you're hosting your site at <your-username>.github.io directly,
 #                                             otherwise will be hosted at <your-username>.github.io/{{base_url}}
 repository          : TheWongLife1.github.io  # Change to <your-username> for github OR, if that doesn't work <your-username>/<your-username>.github.io (Or remove it if you don't need remote projects) -- for example, I'd put "jnaiman" without the quotes after the ":" here
-open_new_tab        : false                             # Opens external URLs in new tab (Works for posts, projects & navbar only)
+open_new_tab        : false                   # Opens external URLs in new tab (Works for posts, projects & navbar only)
 
 ### Plugins ###
 plugins:
