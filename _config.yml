@@ -5,13 +5,13 @@
 # NOTE: It looks like you need to rebuild + repush everytime you update this _config.yml file
 
 ### Site Settings ###
-title               : IS445 Jekyll Template 
+title               : Nicholas Wong's Jekyll Template 
 description         : >-
-                      I'm definitely not a corgi!
+                      IS 445 Lab 6 Jekyll Template Upload to GitHub Pages
 baseurl             : ""   # Change to empty quotes if you're hosting your site at <your-username>.github.io directly,
 #                                             otherwise will be hosted at <your-username>.github.io/{{base_url}}
 repository          : TheWongLife1.github.io  # Change to <your-username> for github OR, if that doesn't work <your-username>/<your-username>.github.io (Or remove it if you don't need remote projects) -- for example, I'd put "jnaiman" without the quotes after the ":" here
-open_new_tab        : false                   # Opens external URLs in new tab (Works for posts, projects & navbar only)
+open_new_tab        : false                   # Opens external URLs in new tab (Works for posts, projects, & navbar only)
 
 ### Plugins ###
 plugins:
@@ -32,27 +32,18 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : A. P. Corgi
-  image             : https://media.tenor.com/8RcIoWTKYR4AAAAe/scuze-corgi.png
-#  behance           : your_username
-# dribbble          : your_username
+  name              : Nicholas Wong
+  image             : https://thewonglife.is-a.dev/images/Nicholas_Wong_Canada.jpg
   email             : nwong66238@gmail.com
-#  facebook          : your_username
+  facebook          : thewonglife1
   github            : TheWongLife1
-# gitlab            : your_username
-# instagram         : your_username
-# kaggle            : your_username
-#  linkedin          : your_username
-#  medium            : your_username
-# soundcloud        : your_username
-# spotify           : your_username
-# stackoverflow     : your_user_id
-# tumblr            : your_username.tumblr.com
-#  twitch            : your_username
-# twitter           : your_username
-#  vimeo             : your_username
-# youtube           : your_channel_name
-# keybase           : your_username
+  instagram         : the.wong.life
+  kaggle            : thewonglife1
+  linkedin          : nicholaswong27
+  spotify           : TheWongLife
+  stackoverflow     : 22104114
+  twitter           : The_Wong_Life
+  youtube           : TheWongLife1
 
 ### Posts ###
 permalink: /blog/:title
@@ -66,8 +57,8 @@ collections:
     output: true                                        # For Documentation Only
 
 ### Disqus ###
-disqus:
-  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+# disqus:
+#   shortname: your-short-name-disqus                     # Your website Shortname on disqus
 
 ### Analytics ###
 analytics:
@@ -77,12 +68,12 @@ analytics:
 
 ### Buy me a coffee ###
 # See https://www.buymeacoffee.com/
-buymeacoffee:
-  enabled: false
-  username: your_username
-  color: "#007bff"
-  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
-  description: "Support me on Buy me a coffee!"
+# buymeacoffee:
+#   enabled: false
+#   username: your_username
+#   color: "#007bff"
+#   message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+#   description: "Support me on Buy me a coffee!"
 
 ### Defaults for collections ###
 defaults:
