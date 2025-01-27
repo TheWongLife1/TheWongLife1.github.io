@@ -8,30 +8,30 @@ description: This is a blog post to get you started.
 
 Source: [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU)
 
-This is me writing an intro to this blog post.  So introlicioius.
+This is me writing an intro to this blog post. So introlicioius.
 
-## 1. Here is one thing I want to say
+## 1. Here's 1 thing I want to say
 
-This is maybe an important thing, and, at the very least it is first.
+This is maybe an important thing, &, at the very least it's 1st.
 
-## 2. Another thing
+## 2. Another Thing
 
-I am now talking about a second thing, probably also good.
+I'm now talking about a 2nd thing, probably also good.
 
-## 3. A third thing
+## 3. A 3rd Thing
 
-We are now getting into the weeds of things that I am saying.  It is probably unlikely someone has made it thus far.
+We're now getting into the weeds of things I'm saying. It's probably unlikely someone has made it thus far.
 
 ## 4. Thing #4.
 
-At this point, you are probably no longer into me listing off things.  Let's put in an image to placate the reader:
+At this point, you're probably no longer into me listing off things. Let's put in an image to placate the reader:
 
-![corg](https://media.istockphoto.com/photos/welsh-corgi-picture-id962032196?k=20&m=962032196&s=170667a&w=0&h=NhIyQdJgVw0cw_EeLtP3LcLExLuiAWPwzL6_WsRKUfQ=)
+![Canada](https://thewonglife.is-a.dev/images/Nicholas_Wong_Canada.jpg)
 
-## 5. The last thing
+## 5. The Last Thing
 
-This is my final thing, probably would be great if this was a TL;DR or summary.  But I don't have that for you.  I have given you so little already, why start saying anything useful now?
+This is my final thing, probably would be great if this was a TL;DR or summary. But I don't have that for you. I've given you so little already, why start saying anything useful now?
 
-Besides, all anybody wants is the DERP:
+Besides, all anybody wants is a certificate:
 
-![MAXIMUM DERP](http://3.bp.blogspot.com/-AXnXOPZgqMk/Un-xCBAa4gI/AAAAAAAAsWA/z_lZsvDoCRk/s1600/derpstages.jpg)
+![Certificate](https://thewonglife.is-a.dev/images/Nicholas_Wong_Blackwell_Summer_Scholars_Certificate.jpg)

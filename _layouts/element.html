@@ -1,19 +1,13 @@
 {% assign page_title = page.title | slice: 2, page.title.size %}
 <h2 id="{{ page_title | slugify }}">{{ page_title }}</h2>
-
 {%- assign code = content | strip -%}
-
 {%- if code contains '{% ' -%}
-
     {%- assign code = code | newline_to_br | split: '<br />' -%}
-
     {%- assign start_capture = false -%}
     {%- assign captured_text = '' -%}
     {%- assign captured_var  = '' -%}
     {%- assign includes      = '' | split: '' -%}
-
     {%- for line in code -%}
-
         {%- if line contains '{% endcapture' -%}
             {%- assign start_capture = false -%}
         {%- elsif start_capture == true -%}
@@ -25,30 +19,23 @@
         {%- elsif line contains '{% include' -%}
             {%- assign includes = includes | push: line -%}
         {%- endif -%}
-
     {%- endfor -%}
-
     {%- assign list_items      = nil -%}
     {%- assign carousel_images = nil -%}
-
     {%- case captured_var -%}
         {%- when 'list_items' -%}
             {%- assign list_items = captured_text -%}
         {%- when 'carousel_images' -%}
             {%- assign carousel_images = captured_text -%}
     {%- endcase -%}
-
     {%- for include in includes -%}
-
         {%- assign incl = include | strip -%}
         {%- assign incl = incl | remove: '{% include ' -%}
         {%- assign incl = incl | remove: ' %' | remove: '}' -%}
         {%- assign incl = incl | replace_first: ' ', '" ' -%}
         {%- assign temp = incl | split: '" ' -%}
-
         {%- assign file  = temp | first -%}
         {%- assign params = temp | shift -%}
-
         {%- assign alt     = nil -%}
         {%- assign block   = nil -%}
         {%- assign caption = nil -%}
@@ -60,13 +47,10 @@
         {%- assign title   = nil -%}
         {%- assign text    = nil -%}
         {%- assign type    = nil -%}
-
         {%- for param in params -%}
-
             {%- assign pair  = param | split: '='  -%}
             {%- assign key   = pair[0] -%}
             {%- assign value = pair[1] | remove: '"' -%}
-
             {%- case key -%}
                 {%- when 'alt' -%}
                     {%- assign alt = value -%}
@@ -91,10 +75,7 @@
                 {%- when 'type' -%}
                     {%- assign type = value -%}
             {%- endcase -%}
-
         {%- endfor -%}
-
-
         {%- include {{ file }} 
                     alt=alt
                     block=block
@@ -108,9 +89,7 @@
                     text=text
                     type=type
                     -%}
-
     {%- endfor -%}
-
 {%- else -%}
     {{ code | markdownify }}
 {%- endif -%}
@@ -130,12 +109,9 @@
         {{ code }}
     {%- endif -%}
     {%- endhighlight -%}
-
-
     {%- for tip in page.tips -%}
         <blockquote>
             {{ tip | markdownify }}
         </blockquote>
     {%- endfor -%}
-
 </details>

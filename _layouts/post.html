@@ -14,9 +14,7 @@ layout: page
     {{ words | divided_by: 180 }} mins read time
   {%- endif -%}
   </b>
-
   <br>
-
   {%- if page.tags != empty -%}
     Tags: 
     {% for tag in page.tags %}
@@ -25,11 +23,9 @@ layout: page
     </a>
     {% endfor %}
   {%- endif -%}
-
 </p>
 
 {{ content }}
-
 {% if page.comments %}
 <div class="pt-5">
   {% include blog/disqus.html %}

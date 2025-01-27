@@ -1,9 +1,9 @@
 - name: Adobe Photoshop
-  percentage: 95
+  percentage: 100
   level: Expert
-  color: info
+  color: success
 
 - name: Adobe Illustrator
-  percentage: 90
+  percentage: 100
   level: Expert
   color: success

@@ -3,7 +3,7 @@ title: What the heck is a Callback?
 tags: [JavaScript, Nodejs, Web Development]
 style: fill
 color: danger
-description: Learn and understand the basics of callbacks in just 6 minutes with easy examples.
+description: Learn & understand the basics of callbacks in just 6 minutes with easy examples.
 ---
 
 Source: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
@@ -12,15 +12,15 @@ Source: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-cal
 
 ## What is a Callback?
 
-**Simply put:** A callback is a function that is to be executed **after** another function has finished executing — hence the name ‘call back’.
+**Simply put:** A callback is a function that's to be executed **after** another function has finished executing — hence the name ‘call back’.
 
-**More complexly put:** In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. Functions that do this are called **higher-order functions**. Any function that is passed as an argument is called a **callback function**.
+**More complexly put:** In JavaScript, functions are objects. Because of this, functions can take functions as arguments, & can be returned by other functions. Functions which do this are called **higher-order functions**. Any function that's passed as an argument is called a **callback function**.
 
 ^ That’s a lot of words. Lets look at some examples to break this down a little more.
 
 ## Why do we need Callbacks?
 
-For one very important reason — JavaScript is an event driven language. This means that instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events. Lets look at a basic example:
+For 1 very important reason — JavaScript is an event driven language. This means instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events. Lets look at a basic example:
 
 ```javascript
 function first(){
@@ -33,7 +33,7 @@ first();
 second();
 ```
 
-As you would expect, the function `first` is executed first, and the function `second` is executed second — logging the following to the console:
+As you'd expect, the function `first` is executed 1st, & the function `second` is executed 2nd — logging the following to the console:
 
 ```javascript
 // 1
@@ -42,7 +42,7 @@ As you would expect, the function `first` is executed first, and the function `s
 
 All good so far.
 
-But what if function `first` contains some sort of code that can’t be executed immediately? For example, an API request where we have to send the request then wait for a response? To simulate this action, were going to use `setTimeout` which is a JavaScript function that calls a function after a set amount of time. We’ll delay our function for 500 milliseconds to simulate an API request. Our new code will look like this:
+But what if function `first` contains some sort of code which can’t be executed immediately? For example, an API request where we have to send the request then wait for a response? To simulate this action, we're going to use `setTimeout` which is a JavaScript function which calls a function after a set amount of time. We’ll delay our function for 500 milliseconds to simulate an API request. Our new code will look like this:
 
 ```javascript
 function first(){
@@ -58,7 +58,7 @@ first();
 second();
 ```
 
-It’s not important that you understand how `setTimeout()` works right now. All that matters is that you see we’ve moved our `console.log(1);` inside of our 500 millisecond delay. So what happens now when we invoke our functions?
+It’s not important that you understand how `setTimeout()` works right now. All that matters is you see we’ve moved our `console.log(1);` inside of our 500 millisecond delay. So what happens now when we invoke our functions?
 
 ```javascript
 first();
@@ -67,7 +67,7 @@ second();
 // 1
 ```
 
-Even though we invoked the `first()` function first, we logged out the result of that function after the `second()` function.
+Even though we invoked the `first()` function 1st, we logged out the result of that function after the `second()` function.
 
 It’s not that JavaScript didn’t execute our functions in the order we wanted it to, it’s instead that **JavaScript didn’t wait for a response from `first()` before moving on to execute `second()`**.
 
@@ -77,7 +77,7 @@ So why show you this? Because you can’t just call one function after another a
 
 _Alright, enough talk, lets create a callback!_
 
-First, open up your Chrome Developer Console (Windows: Ctrl + Shift + J)(Mac: Cmd + Option + J) and type the following function declaration into your console:
+1st, open up your Chrome Developer Console (Windows: Ctrl + Shift + J)(Mac: Cmd + Option + J) & type the following function declaration into your console:
 
 ```javascript
 function doHomework(subject) {
@@ -85,14 +85,14 @@ function doHomework(subject) {
 }
 ```
 
-Above, we’ve created the function `doHomework` . Our function takes one variable, the subject that we are working on. Call your function by typing the following into your console:
+Above, we’ve created the function `doHomework`. Our function takes 1 variable, the subject we're working on. Call your function by typing the following into your console:
 
 ```javascript
 doHomework('math');
 // Alerts: Starting my math homework.
 ```
 
-Now lets add in our callback — as our last parameter in the `doHomework()` function we can pass in `callback`. The callback function is then defined in the second argument of our call to `doHomework()`.
+Now lets add in our callback — as our last parameter in the `doHomework()` function we can pass in `callback`. The callback function is then defined in the 2nd argument of our call to `doHomework()`.
 
 ```javascript
 function doHomework(subject, callback) {
@@ -105,7 +105,7 @@ doHomework('math', function() {
 });
 ```
 
-As you’ll see, if you type the above code into your console you will get two alerts back to back: Your ‘starting homework’ alert, followed by your ‘finished homework’ alert.
+As you’ll see, if you type the above code into your console you'll get 2 alerts back to back: Your ‘starting homework’ alert, followed by your ‘finished homework’ alert.
 
 But callback functions don’t always have to be defined in our function call. They can be defined elsewhere in our code like this:
 
@@ -136,7 +136,7 @@ T.get('search/tweets', params, function(err, data, response) {
 })
 ```
 
-- `T.get` simply means we are making a get request to Twitter
-- There are three parameters in this request: `‘search/tweets’`, which is the route of our request, `params` which are our search parameters, and then an anonymous function which is our callback.
+- `T.get` simply means we're making a get request to Twitter
+- There are 3 parameters in this request: `‘search/tweets’`, which is the route of our request, `params` which are our search parameters, & then an anonymous function which is our callback.
 
-A callback is important here because we need to wait for a response from the server before we can move forward in our code. We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get request, we wait. Once Twitter responds, our callback function is invoked. Twitter will either send an `err` (error) object or a `response` object back to us. In our callback function we can use an `if()` statement to determine if our request was successful or not, and then act upon the new data accordingly.
+A callback is important here because we need to wait for a response from the server before we can move forward in our code. We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get request, we wait. Once Twitter responds, our callback function is invoked. Twitter will either send an `err` (Error) object or a `response` object back to us. In our callback function we can use an `if()` statement to determine if our request was successful or not, & then act upon the new data accordingly.
