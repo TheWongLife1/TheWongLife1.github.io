@@ -1,10 +1,8 @@
 require "mini_magick"
 include MiniMagick
-
 module Jekyll
   class GalleryGenerator < Generator
     safe true
-
     def generate(site)
        posts = site.posts.docs.select { |post| post.data['gallery_items'] }
        resize_dimensions = Jekyll.configuration({})['gallery_items']['resize_dimensions']

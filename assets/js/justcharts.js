@@ -7,11 +7,9 @@ async function parseSchema(viewdiv){
 
 function parseInlineSchema(viewdiv){
     let inline = JSON.parse(viewdiv.textContent);
-    
     let baseSchema = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     }
-
     let schema = Object.assign({}, baseSchema, inline)
     return schema
 }
@@ -19,7 +17,6 @@ function parseInlineSchema(viewdiv){
 window.onload = function(){
     // Find all the <vegachart> elements.
     let viewDivs = document.querySelectorAll('vegachart');
-
     // Replace all <vegachart> html contents with proper vegalite charts.
     for (let index = 0; index < viewDivs.length; index++) {
         if ('schema-url' in viewDivs[index].attributes) {

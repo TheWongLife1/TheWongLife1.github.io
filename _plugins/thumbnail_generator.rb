@@ -1,10 +1,8 @@
 require "mini_magick"
 include MiniMagick
-
 module Jekyll
   class ThumbnailGenerator < Generator
     safe true
-
     def generate(site)
        posts = site.posts.docs.select { |post| post.data['thumbnail'] }
        resize_dimensions = Jekyll.configuration({})['thumbnail']['resize_dimensions']
