@@ -25,14 +25,32 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script src="{{ site.baseurl }}/assets/js/justcharts.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { font-size: 2em; }
-        h2 { font-size: 1.5em; }
-        .left { float: left; margin-right: 10px; }
-        .right { float: right; }
-        .button { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
-        .button:hover { background-color: #0056b3; }
-    </style>
+      body { 
+          font-family: Arial, sans-serif; 
+          margin: 20px; 
+          min-height: 100vh; /* Ensure body takes full viewport height */
+          display: flex; 
+          flex-direction: column; 
+      }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.5em; }
+      .content { flex: 1; } /* Push buttons to bottom */
+      .button-container {
+          display: flex; /* Use flexbox for alignment */
+          justify-content: space-between; /* Left & right alignment */
+          margin-top: 20px; /* Space above buttons */
+          padding-bottom: 20px; /* Space below buttons */
+      }
+      .button { 
+          display: inline-block; 
+          padding: 10px 20px; 
+          background-color: #007bff; 
+          color: white; 
+          text-decoration: none; 
+          border-radius: 5px; 
+      }
+      .button:hover { background-color: #0056b3; }
+  </style>
 </head>
 
 <body>
@@ -55,14 +73,10 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
 
     <h2>Search The Data & Methods</h2>
     <p>Below are links to the dataset & the Python notebook used to generate these visualizations.</p>
-    <div class="left">
-        <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/bfro_reports_fall2022.csv" class="button">The Data</a>
+    <div class="button-container">
+      <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/bfro_reports_fall2022.csv" class="button">The Data</a>
+      <a href="https://github.com/TheWongLife1/TheWongLife1.github.io/blob/main/python_notebooks/Workbook.ipynb" class="button">The Code</a>
     </div>
-    <div class="right">
-        <a href="https://github.com/TheWongLife1/TheWongLife1.github.io/blob/main/python_notebooks/Workbook.ipynb" class="button">The Code</a>
-    </div>
-    <!-- Clear float -->
-    <div style="clear: both;"></div>
 
 <!--<small id="attribution">
     theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
