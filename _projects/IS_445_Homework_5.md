@@ -32,7 +32,7 @@ For the area chart, I implemented an interval selection (`brush`) on the x-axis 
 
 ## Search The Data & Methods
 
-Below are links to the dataset & the Python notebook used to generate these visualizations.
+Below are links to the dataset & the Python notebook used to generate these visualizations (Note: GitHub doesn't display the plots in the `Workbook.ipynb` file, but `nbviewer` does here: https://nbviewer.org/github/TheWongLife1/TheWongLife1.github.io/blob/main/python_notebooks/Workbook.ipynb).
 
 <div class = "left"> {% include elements/button.html link = "https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/bfro_reports_fall2022.csv" text = "The Data" %} </div> 
 
