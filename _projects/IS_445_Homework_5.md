@@ -24,7 +24,7 @@ This visualization displays the number of Bigfoot sightings reported across diff
 
 <vegachart schema-url = "{{ site.baseurl }}/assets/json/area_chart.json" style = "width: 100%"></vegachart>
 
-This area chart visualizes the mid-temperature of Bigfoot sightings over time, with an upper detailed view & a lower overview chart. The x-axis encodes the sighting date (Temporal data), & the y-axis encodes temperature (Quantitative data), using an area mark to show trends. I added color encoding for season with a Set3 scheme to highlight seasonal variations within the temperature data, ensuring visual distinction. In Python, I transformed the data by converting the `date` column to timestamps with `to_datetime` & filtered out rows with missing date or temperature values for accuracy. This plot differs from Homework 6, which used a scatter plot & the `building_inventory.csv` dataset.
+This area chart visualizes the mid-temperature of Bigfoot sightings over time, with an upper detailed view & a lower overview chart. The x-axis encodes the sighting date (Temporal data), & the y-axis encodes temperature (Quantitative data), using an area mark to show trends. I added color encoding for season with a Set3 scheme to highlight seasonal variations within the temperature data, ensuring visual distinction. In Python, I transformed the data by converting the `date` column to timestamps with `to_datetime` & filtered out rows with missing date or temperature values for accuracy. For notebook display, a sampled subset (500 rows) was used to keep the file size under 5 MB. This plot differs from Homework 6, which used a scatter plot & the `building_inventory.csv` dataset.
 
 ### Interactivity
 

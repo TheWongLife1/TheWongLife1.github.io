@@ -36,7 +36,7 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
 </head>
 
 <body>
-    <h1>IS 445 Homework 5 Jekyll Webpage: Bigfoot Sightings Visualizations</h1>
+    <h1>IS 445 Homework 5 Jekyll Webpage - Bigfoot Sightings Visualizations</h1>
     <p>This project showcases 2 visualizations of Bigfoot sighting data from the <code>bfro_reports_fall2022.csv</code> dataset, created using Altair, Python, & Vega-Lite. The 1st is a bar chart of sightings by state, & the 2nd is an interactive area chart showing temperature trends over time with a linked overview & detail view.</p>
 
     <h2>Visualization 1: Bar Chart of Bigfoot Sightings by State</h2>
@@ -48,7 +48,7 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
     <script type="text/javascript">
         vegaEmbed("#vis2", "https://raw.githubusercontent.com/TheWongLife1/TheWongLife1.github.io/refs/heads/main/assets/json/area_chart.json");
     </script>
-    <p>This area chart visualizes the mid-temperature of Bigfoot sightings over time, with an upper detailed view & a lower overview chart. The x-axis encodes the sighting date (Temporal data), & the y-axis encodes temperature (Quantitative data), using an area mark to show trends. I added color encoding for season with a Set3 scheme to highlight seasonal variations within the temperature data, ensuring visual distinction. In Python, I transformed the data by converting the <code>date</code> column to timestamps with <code>to_datetime</code> & filtered out rows with missing date or temperature values for accuracy. This plot differs from Homework 6, which used a scatter plot & a different dataset (<code>building_inventory.csv</code>).</p>
+    <p>This area chart visualizes the mid-temperature of Bigfoot sightings over time, with an upper detailed view & a lower overview chart. The x-axis encodes the sighting date (Temporal data), & the y-axis encodes temperature (Quantitative data), using an area mark to show trends. I added color encoding for season with a Set3 scheme to highlight seasonal variations within the temperature data, ensuring visual distinction. In Python, I transformed the data by converting the <code>date</code> column to timestamps with <code>to_datetime</code> & filtered out rows with missing date or temperature values for accuracy. For notebook display, a sampled subset (500 rows) was used to keep the file size under 5 MB. This plot differs from Homework 6, which used a scatter plot & a different dataset (<code>building_inventory.csv</code>).</p>
 
     <h3>Interactivity</h3>
     <p>For the area chart, I implemented an interval selection (<code>brush</code>) on the x-axis of the lower overview chart, allowing users to drag a range dynamically updating the upper chart to zoom into the selected time period. This interactivity clarifies temporal trends by enabling exploration of specific date ranges, making it easier to identify patterns in temperature & seasonality, enhancing the visualization’s depth & engagement.</p>
