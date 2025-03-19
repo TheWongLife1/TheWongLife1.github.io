@@ -20,10 +20,9 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IS 445 Homework 5 Jekyll Webpage - Bigfoot Sightings Visualizations</title>
-    <!-- Custom JS for Vega-Lite rendering -->
-    <script src="{{ site.baseurl }}/assets/js/vega.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/vega-lite.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/vega-embed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script src="{{ site.baseurl }}/assets/js/justcharts.js"></script>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
@@ -45,7 +44,12 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
     <p>This visualization displays the number of Bigfoot sightings reported across different states, highlighting the geographic distribution of these events. I used a bar chart with the x-axis encoding state names (Nominal data) & the y-axis encoding the count of sightings (Quantitative data). The bars are colored by state using a Tableau20 color scheme to differentiate them visually, though I omitted the legend due to the large number of states for clarity. The x-axis is sorted by count in descending order to emphasize states with the most sightings. On the analysis side, I transformed the data in Python by counting occurrences per state with <code>value_counts()</code> & restructuring it into a DataFrame suitable for Altair. There’s no overlap with Homework 6, as this uses a different dataset (<code>bfro_reports_fall2022.csv</code>) & plot type.</p>
 
     <h2>Visualization 2: Interactive Area Chart of Temperature Over Time</h2>
-    <vegachart schema-url="{{ site.baseurl }}/assets/json/scatter_plot.json" style="width: 100%"></vegachart>
+    <div id="vis2"></div>
+    <script>
+        fetch("{{ site.baseurl }}/assets/json/scatter_plot.json")
+            .then(response => response.json())
+            .then(spec => vegaEmbed("#vis2", spec));
+    </script>
     <p>This area chart visualizes the mid-temperature of Bigfoot sightings over time, with an upper detailed view & a lower overview chart. The x-axis encodes the sighting date (Temporal data), & the y-axis encodes temperature (Quantitative data), using an area mark to show trends. I added color encoding for season with a Set3 scheme to highlight seasonal variations within the temperature data, ensuring visual distinction. In Python, I transformed the data by converting the <code>date</code> column to timestamps with <code>to_datetime</code> & filtered out rows with missing date or temperature values for accuracy. This plot differs from Homework 6, which used a scatter plot & a different dataset (<code>building_inventory.csv</code>).</p>
 
     <h3>Interactivity</h3>
