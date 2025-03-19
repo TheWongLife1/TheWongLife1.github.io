@@ -32,7 +32,7 @@ For the area chart, I implemented an interval selection (`brush`) on the x-axis 
 
 ## Search The Data & Methods
 
-Below are links to the dataset & the Python notebook used to generate these visualizations:
+Below are links to the dataset & the Python notebook used to generate these visualizations.
 
 <div class = "left"> {% include elements/button.html link = "https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/bfro_reports_fall2022.csv" text = "The Data" %} </div> 
 

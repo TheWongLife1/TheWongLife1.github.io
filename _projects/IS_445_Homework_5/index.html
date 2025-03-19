@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal & commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+  Updates for IS 445 Spring 2025
+  FALL2024ID12513
+-->
+
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS 445 Homework 5 - Bigfoot Sightings Visualizations</title>
+    <!-- Custom JS for Vega-Lite rendering -->
+    <script src="{{ site.baseurl }}/assets/js/vega.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/vega-lite.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/vega-embed.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/justcharts.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; }
+        .left { float: left; margin-right: 10px; }
+        .right { float: right; }
+        .button { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .button:hover { background-color: #0056b3; }
+    </style>
+</head>
+
+<body>
+    <h1>Homework 5: Bigfoot Sightings Visualizations</h1>
+    <p>This project showcases 2 visualizations of Bigfoot sighting data from the <code>bfro_reports_fall2022.csv</code> dataset, created using Altair, Python, & Vega-Lite. The 1st is a bar chart of sightings by state, & the 2nd is an interactive area chart showing temperature trends over time with a linked overview & detail view.</p>
+
+    <h2>Visualization 1: Bar Chart of Bigfoot Sightings by State</h2>
+    <vegachart schema-url="{{ site.baseurl }}/assets/json/bar_chart.json" style="width: 100%"></vegachart>
+    <p>This visualization displays the number of Bigfoot sightings reported across different states, highlighting the geographic distribution of these events. I used a bar chart with the x-axis encoding state names (Nominal data) & the y-axis encoding the count of sightings (Quantitative data). The bars are colored by state using a Tableau20 color scheme to differentiate them visually, though I omitted the legend due to the large number of states for clarity. The x-axis is sorted by count in descending order to emphasize states with the most sightings. On the analysis side, I transformed the data in Python by counting occurrences per state with <code>value_counts()</code> & restructuring it into a DataFrame suitable for Altair. There’s no overlap with Homework 6, as this uses a different dataset (<code>bfro_reports_fall2022.csv</code>) & plot type.</p>
+
+    <h2>Visualization 2: Interactive Area Chart of Temperature Over Time</h2>
+    <vegachart schema-url="{{ site.baseurl }}/assets/json/scatter_plot.json" style="width: 100%"></vegachart>
+    <p>This area chart visualizes the mid-temperature of Bigfoot sightings over time, with an upper detailed view & a lower overview chart. The x-axis encodes the sighting date (Temporal data), & the y-axis encodes temperature (Quantitative data), using an area mark to show trends. I added color encoding for season with a Set3 scheme to highlight seasonal variations within the temperature data, ensuring visual distinction. In Python, I transformed the data by converting the <code>date</code> column to timestamps with <code>to_datetime</code> & filtered out rows with missing date or temperature values for accuracy. This plot differs from Homework 6, which used a scatter plot & a different dataset (<code>building_inventory.csv</code>).</p>
+
+    <h3>Interactivity</h3>
+    <p>For the area chart, I implemented an interval selection (<code>brush</code>) on the x-axis of the lower overview chart, allowing users to drag a range dynamically updating the upper chart to zoom into the selected time period. This interactivity clarifies temporal trends by enabling exploration of specific date ranges, making it easier to identify patterns in temperature & seasonality, enhancing the visualization’s depth & engagement.</p>
+
+    <h2>Search The Data & Methods</h2>
+    <p>Below are links to the dataset & the Python notebook used to generate these visualizations.</p>
+    <div class="left">
+        <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/bfro_reports_fall2022.csv" class="button">The Data</a>
+    </div>
+    <div class="right">
+        <a href="https://github.com/TheWongLife1/TheWongLife1.github.io/blob/main/python_notebooks/Workbook.ipynb" class="button">The Code</a>
+    </div>
+    <!-- Clear float -->
+    <div style="clear: both;"></div>
+
+  </main>
+  <footer class="mt-auto py-3 text-center">
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Nicholas Wong</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1" href="mailto:nwong66238@gmail.com
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/TheWongLife1"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/TheWongLife"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/TheWongLife1"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-1x"></i>
+    </a>
+</div>
+
+  Theme by <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a> & <a href="https://github.com/4dcu-be/4dcu.be">4dcu.be</a>.
+
+<!--<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+-->
+</footer>
+
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+<!--
+End of checks! 
+-->
+</html>
