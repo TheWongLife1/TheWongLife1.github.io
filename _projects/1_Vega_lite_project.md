@@ -2,7 +2,7 @@
 name: Vega Lite Example Project
 tools: [Python, HTML, vega-lite]
 image: assets/pngs/cars.png
-description: This is a "showcase" project that uses vega-lite for interactive viz!
+description: This is a "showcase" project using vega-lite for interactive viz!
 custom_js:
   - vega.min
   - vega-lite.min
@@ -12,7 +12,7 @@ custom_js:
 
 # Example Including Vega-lite
 
-Example comes from this [great blog post right here](https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html) that was also used in [our test import script](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb).
+Example comes from this [great blog post right here](https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html) which was also used in [our test import script](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb).
 
 We can use a vegachart HTML tag like so:
 
