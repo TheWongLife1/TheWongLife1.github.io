@@ -54,14 +54,14 @@ description: Interactive visualizations of Bigfoot sightings using Altair & Vega
 
 <body>
     <h1>IS 445 Homework 5 Jekyll Webpage - Bigfoot Sightings Visualizations</h1>
-    <p>This project showcases 2 visualizations of Bigfoot sighting data from the <code>bfro_reports_fall2022.csv</code> dataset, created using Altair, Python, & Vega-Lite. The 1st is a bar chart of sightings by state, & the 2nd is an interactive area chart showing temperature trends over time with a linked overview & detail view.</p>
+    <p>This project showcases 2 visualizations of Bigfoot sighting data from the <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/bfro_reports_fall2022.csv">bfro_reports_fall2022.csv</a> dataset, created using Altair, Python, & Vega-Lite. The 1st is a bar chart of sightings by state, & the 2nd is an interactive area chart showing temperature trends over time with a linked overview & detail view.</p>
 
     <h2>Visualization 1: Bar Chart of Bigfoot Sightings by State</h2>
     <div id="vis"></div>
     <script type="text/javascript">
         vegaEmbed("#vis", "https://raw.githubusercontent.com/TheWongLife1/TheWongLife1.github.io/refs/heads/main/assets/json/bar_chart.json");
     </script>
-    <p>This visualization displays the number of Bigfoot sightings reported across different states, highlighting the geographic distribution of these events. I used a bar chart with the x-axis encoding state names (Nominal data) & the y-axis encoding the count of sightings (Quantitative data). The bars are colored by state using a Tableau20 color scheme to differentiate them visually, though I omitted the legend due to the large number of states for clarity. The x-axis is sorted by count in descending order to emphasize states with the most sightings. On the analysis side, I transformed the data in Python by counting occurrences per state with <code>value_counts()</code> & restructuring it into a DataFrame suitable for Altair. There’s no overlap with Homework 6, as this uses a different dataset (<code>bfro_reports_fall2022.csv</code>) & plot type.</p>
+    <p>This visualization displays the number of Bigfoot sightings reported across different states, highlighting the geographic distribution of these events. I used a bar chart with the x-axis encoding state names (Nominal data) & the y-axis encoding the count of sightings (Quantitative data). The bars are colored by state using a Tableau20 color scheme to differentiate them visually, though I omitted the legend due to the large number of states for clarity. The x-axis is sorted by count in descending order to emphasize states with the most sightings. On the analysis side, I transformed the data in Python by counting occurrences per state with <code>value_counts()</code> & restructuring it into a DataFrame suitable for Altair. There’s no overlap with Homework 6, as this Homework uses a different dataset (<code>bfro_reports_fall2022.csv</code>) than Homework 6 <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">building_inventory.csv</a>.</p>
 
     <h2>Visualization 2: Interactive Area Chart of Temperature Over Time</h2>
     <div id="vis2"></div>
