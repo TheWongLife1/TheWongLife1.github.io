@@ -2,6 +2,7 @@
 name: IS 445 Homework 5 Jekyll Webpage - Bigfoot Sightings Visualizations
 tools: [Altair, Python, Vega-Lite]
 image: assets/pngs/bigfoot.png
+permalink: /projects/IS_445_Homework_5/index.html
 description: Interactive visualizations of Bigfoot sightings using Altair & Vega-Lite!
 custom_js:
   - vega.min
