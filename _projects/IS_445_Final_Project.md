@@ -6,10 +6,10 @@ permalink: /projects/IS_445_Final_Project/index.html
 tools: [Altair, Python, Vega-Lite]
 description: Are Chicago Schools Safe & Successful? A Look at 2011 - 2012
 custom_js:
-  - justcharts
   - vega.min
-  - vega-embed.min
   - vega-lite.min
+  - vega-embed.min
+  - justcharts
 ---
 
 # IS 445 Final Project Jekyll Webpage - Chicago Public Schools Data Journalism (2011 - 2012)

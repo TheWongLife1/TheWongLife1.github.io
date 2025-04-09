@@ -6,10 +6,10 @@ permalink: /projects/IS_445_Homework_5/index.html
 tools: [Altair, Python, Vega-Lite]
 description: Interactive visualizations of Bigfoot sightings using Altair & Vega-Lite!
 custom_js:
-  - justcharts
   - vega.min
-  - vega-embed.min
   - vega-lite.min
+  - vega-embed.min
+  - justcharts
 ---
 
 # IS 445 Homework 5 Jekyll Webpage - Bigfoot Sightings Visualizations
