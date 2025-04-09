@@ -1,7 +1,7 @@
 ---
 name: IS 445 Final Project Jekyll Webpage - Chicago Public Schools Data Journalism (2011 - 2012)
 author: Nicholas Wong, Dulf Genis, Qi Deng, & Shreya Shetty
-image: assets/pngs/bigfoot.png
+image: assets/pngs/attendance.png
 permalink: /projects/IS_445_Final_Project/index.html
 tools: [Altair, Python, Vega-Lite]
 description: Are Chicago Schools Safe & Successful? A Look at 2011 - 2012
@@ -30,11 +30,11 @@ The chart above shows each school as a dot. Schools with higher attendance (Furt
 
 ## How Safe Are Chicago Schools by Type?
 
-<vegachart schema-url = "{{ site.baseurl }}/assets/json/crime-chart.json" style = "width: 100%"></vegachart>
+![](../assets/pngs/crime_chart.png)
 
 Average safety scores for Chicago schools by type, calculated from our primary dataset.
 
-<vegachart schema-url = "{{ site.baseurl }}/assets/json/bar-crime-chart.json" style = "width: 100%"></vegachart>
+![](../assets/pngs/bar_crime_chart.png)
 
 Top 5 crime types reported in Chicago in 2011, based on Chicago Crime Data.
 
