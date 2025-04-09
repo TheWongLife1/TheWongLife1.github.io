@@ -30,11 +30,11 @@ The chart above shows each school as a dot. Schools with higher attendance (Furt
 
 ## How Safe Are Chicago Schools by Type?
 
-<img src="images/crime_chart.png" alt="Contextual Visualization 1>
+<vegachart schema-url = "{{ site.baseurl }}/assets/json/crime_chart.json" style = "width: 100%"></vegachart>
 
 Average safety scores for Chicago schools by type, calculated from our primary dataset.
 
-<img src="images/bar_crime_chart.png" alt="Contextual Visualization 2>
+<vegachart schema-url = "{{ site.baseurl }}/assets/json/bar_crime_chart.json" style = "width: 100%"></vegachart>
 
 Top 5 crime types reported in Chicago in 2011, based on Chicago Crime Data.
 
